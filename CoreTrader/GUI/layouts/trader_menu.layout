@@ -1,0 +1,742 @@
+FrameWidgetClass CT_TraderRoot {
+ position 0 0
+ size 1 1
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ priority 900
+ {
+  PanelWidgetClass Dim {
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   ignorepointer 1
+   color 0 0 0 0.6
+   style rover_sim_colorable
+  }
+  PanelWidgetClass Window {
+   position 0.08 0.07
+   size 0.84 0.86
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   ignorepointer 0
+   color 0.06 0.06 0.07 0.97
+   style rover_sim_colorable
+   {
+    TextWidgetClass Title {
+     position 0.02 0.015
+     size 0.4 0.05
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.78 0.1 0.1 1
+     text "CORE TRADER"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 30
+     "text halign" left
+     "text valign" center
+     "bold text" 1
+    }
+    TextWidgetClass TraderName {
+     position 0.02 0.065
+     size 0.4 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.75 0.75 0.75 1
+     text "Trader"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 18
+     "text halign" left
+     "text valign" center
+    }
+    TextWidgetClass CashText {
+     position 0.5 0.025
+     size 0.2 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.9 0.9 0.9 1
+     text "Bargeld: $0"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 18
+     "text halign" right
+     "text valign" center
+     "bold text" 1
+    }
+    TextWidgetClass BankText {
+     position 0.71 0.025
+     size 0.2 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.9 0.9 0.9 1
+     text "Bank: $0"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 18
+     "text halign" right
+     "text valign" center
+     "bold text" 1
+    }
+    ButtonWidgetClass CloseButton {
+     position 0.95 0.02
+     size 0.035 0.05
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     color 1 1 1 1
+     style Empty
+     {
+      PanelWidgetClass CloseButtonBg {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.78 0.1 0.1 1
+       style rover_sim_colorable
+      }
+      TextWidgetClass CloseButtonLabel {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 1 1 1 1
+       text "X"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 18
+       "text halign" center
+       "text valign" center
+       "bold text" 1
+      }
+     }
+    }
+    PanelWidgetClass HeaderLine {
+     position 0.02 0.11
+     size 0.96 0.004
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.78 0.1 0.1 1
+     style rover_sim_colorable
+    }
+    TextWidgetClass CategoryHeader {
+     position 0.02 0.125
+     size 0.2 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.6 0.6 0.6 1
+     text "KATEGORIEN"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+     "bold text" 1
+    }
+    TextWidgetClass ItemHeader {
+     position 0.2 0.125
+     size 0.2 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.6 0.6 0.6 1
+     text "ARTIKEL"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+     "bold text" 1
+    }
+    TextWidgetClass DetailHeader {
+     position 0.5 0.125
+     size 0.2 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.6 0.6 0.6 1
+     text "DETAILS"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+     "bold text" 1
+    }
+    TextWidgetClass SellHeader {
+     position 0.72 0.125
+     size 0.2 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.6 0.6 0.6 1
+     text "VERKAUFEN"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+     "bold text" 1
+    }
+    TextListboxWidgetClass CategoryList {
+     position 0.02 0.17
+     size 0.16 0.66
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     lines 20
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+    }
+    TextListboxWidgetClass ItemList {
+     position 0.2 0.17
+     size 0.28 0.66
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     lines 20
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+    }
+    TextWidgetClass DetailName {
+     position 0.5 0.17
+     size 0.2 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 1 1 1 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 20
+     "text halign" left
+     "text valign" center
+     "bold text" 1
+    }
+    TextWidgetClass DetailBuy {
+     position 0.5 0.215
+     size 0.2 0.03
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.9 0.9 0.9 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+    }
+    TextWidgetClass DetailSell {
+     position 0.5 0.25
+     size 0.2 0.03
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.7 0.7 0.7 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+    }
+    TextWidgetClass VariantHeader {
+     position 0.5 0.29
+     size 0.2 0.03
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.6 0.6 0.6 1
+     text "Variante"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+    }
+    TextListboxWidgetClass VariantList {
+     position 0.5 0.325
+     size 0.2 0.18
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     lines 20
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+    }
+    FrameWidgetClass AttachmentsRow {
+     position 0.5 0.515
+     size 0.2 0.035
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 0
+     {
+      CheckBoxWidgetClass AttachmentsCheck {
+       position 0 0
+       size 0.1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       color 1 1 1 1
+       style Default
+       checked 0
+      }
+      TextWidgetClass AttachmentsLabel {
+       position 0.12 0
+       size 0.88 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.9 0.9 0.9 1
+       text "Mit Aufsaetzen"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 16
+       "text halign" left
+       "text valign" center
+      }
+     }
+    }
+    MultilineTextWidgetClass AttachmentInfo {
+     position 0.5 0.555
+     size 0.2 0.065
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.6 0.6 0.6 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 14
+     "text halign" left
+     wrap 1
+    }
+    TextWidgetClass AmountLabel {
+     position 0.5 0.63
+     size 0.06 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.75 0.75 0.75 1
+     text "Menge"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+    }
+    EditBoxWidgetClass AmountEdit {
+     position 0.56 0.63
+     size 0.14 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "1"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 18
+     style Editor
+    }
+    ButtonWidgetClass BuyButton {
+     position 0.5 0.69
+     size 0.2 0.06
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     color 1 1 1 1
+     style Empty
+     {
+      PanelWidgetClass BuyButtonBg {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.78 0.1 0.1 1
+       style rover_sim_colorable
+      }
+      TextWidgetClass BuyButtonLabel {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 1 1 1 1
+       text "KAUFEN"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 18
+       "text halign" center
+       "text valign" center
+       "bold text" 1
+      }
+     }
+    }
+    TextListboxWidgetClass SellList {
+     position 0.72 0.17
+     size 0.26 0.48
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     lines 20
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+    }
+    TextWidgetClass SellInfo {
+     position 0.72 0.655
+     size 0.26 0.03
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.75 0.75 0.75 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" left
+     "text valign" center
+    }
+    ButtonWidgetClass SellButton {
+     position 0.72 0.69
+     size 0.125 0.06
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     color 1 1 1 1
+     style Empty
+     {
+      PanelWidgetClass SellButtonBg {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.78 0.1 0.1 1
+       style rover_sim_colorable
+      }
+      TextWidgetClass SellButtonLabel {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 1 1 1 1
+       text "VERKAUFEN"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 18
+       "text halign" center
+       "text valign" center
+       "bold text" 1
+      }
+     }
+    }
+    ButtonWidgetClass SellAllButton {
+     position 0.855 0.69
+     size 0.125 0.06
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     color 1 1 1 1
+     style Empty
+     {
+      PanelWidgetClass SellAllButtonBg {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.35 0.07 0.07 1
+       style rover_sim_colorable
+      }
+      TextWidgetClass SellAllButtonLabel {
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 1 1 1 1
+       text "ALLES VERKAUFEN"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 18
+       "text halign" center
+       "text valign" center
+       "bold text" 1
+      }
+     }
+    }
+    PanelWidgetClass FooterLine {
+     position 0.02 0.835
+     size 0.96 0.002
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.25 0.25 0.25 1
+     style rover_sim_colorable
+    }
+    FrameWidgetClass UseBankRow {
+     position 0.02 0.86
+     size 0.4 0.04
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 0
+     {
+      CheckBoxWidgetClass UseBankCheck {
+       position 0 0
+       size 0.1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       color 1 1 1 1
+       style Default
+       checked 0
+      }
+      TextWidgetClass UseBankLabel {
+       position 0.12 0
+       size 0.88 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.9 0.9 0.9 1
+       text "Bankkonto nutzen (Bezahlen / Erloes)"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 16
+       "text halign" left
+       "text valign" center
+      }
+     }
+    }
+    FrameWidgetClass BankPanel {
+     position 0.5 0.85
+     size 0.48 0.06
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 0
+     {
+      TextWidgetClass BankLabel {
+       position 0 0
+       size 0.12 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       ignorepointer 1
+       color 0.75 0.75 0.75 1
+       text "Bank"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 16
+       "text halign" left
+       "text valign" center
+      }
+      EditBoxWidgetClass BankAmountEdit {
+       position 0.12 0.15
+       size 0.3 0.7
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text ""
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 18
+       style Editor
+      }
+      ButtonWidgetClass DepositButton {
+       position 0.45 0.1
+       size 0.26 0.8
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       color 1 1 1 1
+       style Empty
+       {
+        PanelWidgetClass DepositButtonBg {
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         ignorepointer 1
+         color 0.2 0.2 0.22 1
+         style rover_sim_colorable
+        }
+        TextWidgetClass DepositButtonLabel {
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         ignorepointer 1
+         color 1 1 1 1
+         text "EINZAHLEN"
+         font "gui/fonts/sdf_MetronLight24"
+         "exact text" 1
+         "exact text size" 18
+         "text halign" center
+         "text valign" center
+         "bold text" 1
+        }
+       }
+      }
+      ButtonWidgetClass WithdrawButton {
+       position 0.74 0.1
+       size 0.26 0.8
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       color 1 1 1 1
+       style Empty
+       {
+        PanelWidgetClass WithdrawButtonBg {
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         ignorepointer 1
+         color 0.2 0.2 0.22 1
+         style rover_sim_colorable
+        }
+        TextWidgetClass WithdrawButtonLabel {
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         ignorepointer 1
+         color 1 1 1 1
+         text "ABHEBEN"
+         font "gui/fonts/sdf_MetronLight24"
+         "exact text" 1
+         "exact text size" 18
+         "text halign" center
+         "text valign" center
+         "bold text" 1
+        }
+       }
+      }
+     }
+    }
+    TextWidgetClass StatusText {
+     position 0.02 0.925
+     size 0.96 0.045
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     ignorepointer 1
+     color 0.36 0.76 0.42 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 18
+     "text halign" left
+     "text valign" center
+    }
+   }
+  }
+ }
+}
