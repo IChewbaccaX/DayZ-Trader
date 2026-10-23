@@ -2,9 +2,9 @@
   <title>ICX</title>
   <defs>
     <linearGradient id="fire" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFE27A"/>
-      <stop offset="0.45" stop-color="#FF9A1F"/>
-      <stop offset="1" stop-color="#E8361B"/>
+      <stop offset="0" stop-color="#FF8A80"/>
+      <stop offset="0.45" stop-color="#E3161B"/>
+      <stop offset="1" stop-color="#6E0508"/>
     </linearGradient>
     <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#FFFFFF"/>
@@ -13,16 +13,16 @@
       <stop offset="1" stop-color="#E4E6EA"/>
     </linearGradient>
     <radialGradient id="bgglow" cx="0.3" cy="0.5" r="0.8">
-      <stop offset="0" stop-color="#2A1A10"/>
+      <stop offset="0" stop-color="#2A0E10"/>
       <stop offset="0.6" stop-color="#121316"/>
       <stop offset="1" stop-color="#08090A"/>
     </radialGradient>
     <pattern id="hazard" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="14" height="28" fill="#FF9A1F"/>
+      <rect width="14" height="28" fill="#C8141A"/>
     </pattern>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="b"/>
-      <feFlood flood-color="#FF6A00" flood-opacity="0.85"/>
+      <feFlood flood-color="#FF1A1A" flood-opacity="0.85"/>
       <feComposite in2="b" operator="in" result="g"/>
       <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
