@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>ICX</title>
+  <defs>
+    <linearGradient id="fire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE27A"/>
+      <stop offset="0.45" stop-color="#FF9A1F"/>
+      <stop offset="1" stop-color="#E8361B"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.5" stop-color="#C9CCD1"/>
+      <stop offset="0.52" stop-color="#8E939B"/>
+      <stop offset="1" stop-color="#E4E6EA"/>
+    </linearGradient>
+    <radialGradient id="bgglow" cx="0.3" cy="0.5" r="0.8">
+      <stop offset="0" stop-color="#2A1A10"/>
+      <stop offset="0.6" stop-color="#121316"/>
+      <stop offset="1" stop-color="#08090A"/>
+    </radialGradient>
+    <pattern id="hazard" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="28" fill="#FF9A1F"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="b"/>
+      <feFlood flood-color="#FF6A00" flood-opacity="0.85"/>
+      <feComposite in2="b" operator="in" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="grunge" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.22" numOctaves="3" seed="11" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -9 6.1" result="m"/>
+      <feComposite in="SourceGraphic" in2="m" operator="in"/>
+    </filter>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" seed="3"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" rx="96" fill="url(#bgglow)"/>
+  <rect width="100%" height="100%" rx="96" filter="url(#noise)"/>
+  
+  <g id="emblem">
+    <path d="M256.0,46.0 L437.9,151.0 L437.9,361.0 L256.0,466.0 L74.1,361.0 L74.1,151.0 Z" fill="url(#fire)" filter="url(#glow)"/>
+    <path d="M256.0,67.0 L419.7,161.5 L419.7,350.5 L256.0,445.0 L92.3,350.5 L92.3,161.5 Z" fill="#1A1B1F"/>
+    <path d="M256.0,79.6 L408.8,167.8 L408.8,344.2 L256.0,432.4 L103.2,344.2 L103.2,167.8 Z" fill="#101114"/>
+    <clipPath id="innerclip"><path d="M256.0,79.6 L408.8,167.8 L408.8,344.2 L256.0,432.4 L103.2,344.2 L103.2,167.8 Z"/></clipPath>
+    <rect x="46.0" y="356.8" width="420.0" height="29.4" fill="url(#hazard)" opacity="0.9" clip-path="url(#innerclip)"/>
+    <circle cx="256.0" cy="56.5" r="7.4" fill="#2A2C31" stroke="#8E939B" stroke-width="2"/><circle cx="428.8" cy="156.2" r="7.4" fill="#2A2C31" stroke="#8E939B" stroke-width="2"/><circle cx="428.8" cy="355.8" r="7.4" fill="#2A2C31" stroke="#8E939B" stroke-width="2"/><circle cx="256.0" cy="455.5" r="7.4" fill="#2A2C31" stroke="#8E939B" stroke-width="2"/><circle cx="83.2" cy="355.8" r="7.4" fill="#2A2C31" stroke="#8E939B" stroke-width="2"/><circle cx="83.2" cy="156.2" r="7.4" fill="#2A2C31" stroke="#8E939B" stroke-width="2"/>
+    <g filter="url(#grunge)"><path d="M160.3121875 191.48143749999997H126.1871875L105.92546875 313.70799999999997H140.05046875ZM205.72140625 315.67674999999997C236.155 315.67674999999997 260.51828125 296.64549999999997 268.72140625 267.77049999999997H234.3503125C230.24875 279.25487499999997 220.48703125 286.14549999999997 207.93625 286.14549999999997C194.81125 286.14549999999997 188.33078125 278.59862499999997 188.33078125 264.48924999999997C188.33078125 243.89940624999997 198.83078125 219.04393749999997 222.37375 219.04393749999997C233.28390625 219.04393749999997 239.19015625 226.01659374999997 239.35421875 237.58299999999997H273.7253125C275.11984375 207.88768749999997 254.53 189.51268749999997 223.27609375 189.51268749999997C181.03 189.51268749999997 154.20578125 224.29393749999997 154.20578125 264.73534374999997C154.20578125 297.46581249999997 175.6159375 315.67674999999997 205.72140625 315.67674999999997Z" fill="url(#steel)" stroke="#0B0B0D" stroke-width="5" paint-order="stroke"/></g>
+    <g filter="url(#glow)"><g filter="url(#grunge)"><path d="M250.21597656249997 332.335H299.4347265625L321.275546875 306.085C326.607578125 299.8301171875 331.529453125 293.575234375 336.451328125 287.3203515625C339.2198828125 293.575234375 342.0909765625 299.8301171875 345.064609375 306.085L357.369296875 332.335H405.8702734375L365.0597265625 253.07230468749998L425.25015625 179.55179687499998H377.056796875L361.26578125 199.44437499999998C356.0362890625 206.10941406249998 350.9093359375 212.87699218749998 345.884921875 219.54203124999998C343.013828125 212.87699218749998 340.2452734375 206.10941406249998 337.271640625 199.44437499999998L328.45328125 179.55179687499998H281.69546875L318.3019140625 254.20023437499998Z" fill="url(#fire)" stroke="#0B0B0D" stroke-width="6" paint-order="stroke"/></g></g>
+  </g>
+</svg>
